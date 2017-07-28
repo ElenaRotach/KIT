@@ -118,7 +118,7 @@ function writeSS(order, id){
 	}
 	catch (e){
 		if(e == QUOTA_EXCEEDED_ERR){
-			console.log("Превышен лимит в 5Mb");
+			handleExceptLS(e);
 		}
 	}
 }
@@ -130,7 +130,11 @@ function writeLS(order, id){
 	}
 	catch (e){
 		if(e == QUOTA_EXCEEDED_ERR){
-			console.log("Превышен лимит в 5Mb");
+			handleExceptLS(e);			
 		}
 	}
+}
+
+function handleExceptLS(e){
+	console.log("Превышен лимит в 5Mb");
 }
