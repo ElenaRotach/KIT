@@ -106,3 +106,17 @@ function Order(){
 		packS - количество маленьких пачек
 	*/
 }
+
+/*==========================================================================================*/
+function writeSS(order, id){
+	/*SessionStorage - очистится при закрытии вкладки или браузера
+	LocalStorage - очищается методом Clear();*/
+	try{
+		SessionStorage.setItem(id, convertOrder(order));
+	}
+	catch (e){
+		if(e == QUOTA_EXCEEDED_ERR){
+			console.log("Превышен лимит в 5Mb");
+		}
+	}
+}
