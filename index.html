@@ -1,8 +1,168 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>KIT</title>
-	</head>
-	<body>
-	</body>
+<html lang="ru">
+    
+<head>
+  <title>Пёся</title>
+  <meta charset="utf-8">
+  <style>
+  body {
+  	background-color: #CCFFFF;
+  	overflow: hidden;
+  	padding: 0;
+  	min-width: 800px;
+	min-height: 800px;
+  }
+
+  .zz {
+  	width: 800px;
+  }
+
+  .land {
+  	width: 120%;
+  	height: 240px;
+  	background-color: #009933;
+  	margin-left: -10px;
+  	position: absolute;
+  	bottom: 0px;
+  	right: 0px;
+  	box-shadow: 0px 0px 8px 0px black;
+
+  }
+
+  @keyframes cloud {
+  	100% {
+  		transform: translateX(-1500px);
+  	}
+  }
+
+  .cloud {
+  	width: 200px;
+  	float: right;
+  	margin-right: -250px;
+  	animation-name: cloud;
+  	animation-duration: 17s;
+  	animation-timing-function: linear;
+  	animation-iteration-count: infinite;
+  }
+
+
+.cloud2 {
+	animation-delay: 7.5s;
+	margin-top: 70px;
+}
+
+.sun {
+	width: 200px;
+}
+
+.dog {
+	width: 300px;
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	filter: drop-shadow(3px 3px 4px black);
+}
+
+.mini-cloud {
+	width: 300px;
+	position: absolute;
+	bottom: 270px;
+	left: 350px;
+	display: none;
+
+}
+
+.dog:hover ~ .mini-cloud,
+.dog:hover ~ .span-1{
+	display: block;
+}
+
+.span-1 {
+	position: absolute;
+	bottom: 410px;
+	left: 440px;
+	font-size: 40px;
+	display: none;
+}
+
+.span-11 {
+	bottom: 360px;
+	left: 450px;
+}
+
+.dog-2 {
+	width: 300px;
+	filter: drop-shadow(-3px -3px 4px black);
+	transform: scale(-1, 1);
+	position: absolute;
+	bottom: 40px;
+	right: 60px;
+}
+
+.mini-cloud-2 {
+	width: 300px;
+	position: absolute;
+	bottom: 270px;
+	right: 370px;
+	transform: scale(-1, 1);
+	display: none;
+}
+
+.span-2 {
+	position: absolute;
+	bottom: 410px;
+	right: 465px;
+	font-size: 40px;
+	display: none;
+
+}
+
+.span-22 {
+	position: absolute;
+	bottom: 370px;
+	right: 440px;
+	font-size: 30px;
+}
+
+.dog-2:hover ~ .mini-cloud-2,
+.dog-2:hover ~ .span-2{
+	display: block;
+}
+
+
+  </style>
+
+
+
+</head>
+<body>
+	<div class = 'zz'>
+	<div class = 'land'>
+	</div>
+
+	<img class = 'sun' src = 'http://clipart-library.com/image_gallery2/Sun-PNG-Clipart.png'>
+	</img>
+
+	<img class = 'cloud' src = 'https://openclipart.org/image/2400px/svg_to_png/28302/jean-victor-balin-cloud.png'>
+	</img>
+
+	<img class = 'cloud cloud2' src = 'https://openclipart.org/image/2400px/svg_to_png/28302/jean-victor-balin-cloud.png'>
+	</img>
+
+	<img class = 'dog' src = 'https://cdn.pixabay.com/photo/2013/07/12/16/27/dog-150923_640.png'>
+	</img>
+
+	<img class = 'mini-cloud' src = 'http://clipart-library.com/images/M8cAEr6Ta.png'> <span class = 'span-1'>УФ УФ</span>
+	<span class = 'span-1 span-11'>я пёся</span>
+	</img>
+
+	<img class = 'dog-2' src = 'https://cdn.pixabay.com/photo/2013/07/12/16/27/dog-150923_640.png'>
+	</img>
+
+	<img class = 'mini-cloud-2' src = 'http://clipart-library.com/images/M8cAEr6Ta.png'> <span class = 'span-2'>УФ УФ</span>
+	<span class = 'span-2 span-22'>я тебя люблю</span>
+	</img>
+</div>
+
+</body>
 </html>

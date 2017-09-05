@@ -1,0 +1,20 @@
+.views, .comments{
+	color:#00796B;
+	font-weight: bold;
+}
+hr{
+	/*background-color:#00796B;*/
+	border-top: 2px dashed #00796B;
+}
+article{
+	background-color: #B2DFDB;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.post_content{
+	background-color: #fff;
+	padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}

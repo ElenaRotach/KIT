@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KIT</title>
+		
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+    <link href="./css/site.css" rel="stylesheet"/>
+    <link href="./css/post.css" rel="stylesheet"/>
+	
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="./js/bootstrap.min.js"></script>
+	</head>
+	<body>
+	<style>
+.letter{
+    text-indent:50px;
+    }
+</style>
+ 
+<div class='top1' style="background-color: #aaa; height: 100px;"><div id='to1'>
+<p class='letter'>Текст</p>
+</div></div>
+ 
+<div class='bottom1' style="background-color: #bbb; height: 100px;"><div id='bot1'></div></div>
+        
+<script type='text/javascript'>
+var top1 = document.querySelector('.top1').querySelector('#to1');
+var bottom1 = document.querySelector('.bottom1').querySelector('#bot1');
+bottom1.innerHtml = top1.innerHtml;
+top1.innerHtml = "";
+</script>
+		<div class="wrap">
+		    <div class="container">
+				<div class="post_detail light-primary-color">
+				    <H1 class ="primary-text-color">Post 1</H1>
+				    
+				    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu tempor tellus. Quisque nulla magna, porttitor at urna sed, fringilla laoreet mi. Nullam gravida neque ligula, ut euismod nulla aliquet quis. Maecenas ac metus blandit eros mollis pulvinar nec sed libero. Duis vehicula magna sit amet tortor sollicitudin faucibus. Sed dapibus suscipit dolor, a rutrum lorem. Sed rhoncus blandit purus, at eleifend nisl sagittis at. Nullam at auctor lacus. Phasellus facilisis ipsum in tempor ullamcorper. Vestibulum finibus ultricies nunc, ac gravida risus congue at. Aenean vulputate mauris mi, at tempor sem faucibus quis. Sed vehicula sem eu sollicitudin finibus.</p>
+
+					<p>Phasellus et vehicula urna, et porta orci. Curabitur tempus tortor ac fringilla elementum. Vivamus quam mi, viverra eget malesuada sit amet, malesuada mattis erat. Sed euismod augue a augue feugiat fermentum et et sapien. Praesent iaculis nunc et lorem lobortis, in dapibus lectus ullamcorper. Morbi ante est, luctus non est at, luctus faucibus ligula. Fusce a ligula aliquam, sollicitudin lacus ac, sagittis arcu. Nullam vel dignissim nibh, vel tincidunt urna. Aenean feugiat lacinia imperdiet. Fusce id tincidunt libero.</p>
+
+					<p>Aenean sodales nibh id sapien iaculis mattis. Morbi aliquet risus magna, id convallis massa ullamcorper eget. Suspendisse sollicitudin fermentum orci, nec iaculis ex varius sed. Donec pretium justo in purus placerat malesuada. Phasellus dictum erat in purus bibendum, in rhoncus risus accumsan. Maecenas ac tempor elit, id interdum turpis. Vivamus dignissim orci non dui maximus tristique. Vivamus maximus, lectus sed rhoncus facilisis, nunc leo aliquam diam, id luctus felis lacus eu metus.</p>
+					
+				</div>
+				<div id="add_new_comment" class="col-lg-12">
+					<h4>Введите Ваш комментарий</h4>
+					<textarea id="text_comment" class="col-lg-12 col-md-12 col-xs-12"></textarea>
+				    <!--<input type="text" id="text_comment">-->
+				    <a class="go_btn" onclick="goComment(this, 1, 1)">Отправить</a>
+				</div>
+				<div class="comments_blok col-lg-12 col-xs-12">
+					<div class="comment dark-primary-color">
+						<div class="author">
+							<div class="avatar"><img class="avatar_img" src="./img/1.jpg"></div>
+							<div class="author_name text-primary-color">Дэн Симмонс</div>
+						</div>
+						<div class="comment_text light-primary-color">
+							<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque iaculis mi lacus, et porttitor metus vehicula id. Nullam vitae augue lobortis, consequat quam ac, dapibus eros. Nunc eleifend, lorem placerat cursus ultricies, tellus libero varius ante, eget porta eros mauris ut mi. Suspendisse condimentum egestas erat, consequat tempus dolor vehicula et. Aenean ut neque in risus condimentum semper in nec nibh. Curabitur lorem felis, dignissim sed tincidunt et, vehicula non felis. Suspendisse faucibus placerat egestas. Cras consequat viverra mauris, ut lacinia mi facilisis a. Quisque iaculis orci eu tincidunt mollis. Morbi et volutpat felis. Aliquam lacinia congue nibh, eu ultricies lectus consequat ac. Quisque sed auctor orci, a venenatis mauris. Praesent nec convallis orci, facilisis ultrices nisl. Sed condimentum vehicula consequat.</span>
+						</div>
+					</div>
+					<div class="comment dark-primary-color">
+						<div class="author">
+							<div class="avatar"><img class="avatar_img" src="./img/1.jpg"></div>
+							<div class="author_name text-primary-color">Дэн Симмонс</div>
+						</div>
+						<div class="comment_text light-primary-color">
+							<span>Morbi maximus ornare quam, vel aliquet eros tincidunt sit amet. Etiam finibus est eu erat aliquam sodales. Etiam sed neque massa. Sed vitae molestie dui. Etiam commodo suscipit mi ut vehicula. Phasellus non magna eget ipsum consectetur tristique eget sollicitudin libero. In eu velit purus. Donec consectetur lacus at urna volutpat, et fringilla erat pharetra. Praesent pulvinar cursus fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse risus nisi, scelerisque quis odio eu, iaculis ultricies neque. Sed lorem elit, pellentesque at nunc at, dignissim luctus leo. Vivamus efficitur sollicitudin volutpat. Sed sit amet rhoncus nisl. Nam pellentesque augue nisl, a pulvinar nisl condimentum ac. Mauris eleifend nulla vel ante faucibus mattis.</span>
+						</div>
+					</div>
+					<div class="comment dark-primary-color">
+						<div class="author">
+							<div class="avatar"><img class="avatar_img" src="./img/1.jpg"></div>
+							<div class="author_name text-primary-color">Дэн Симмонс</div>
+						</div>
+						<div class="comment_text light-primary-color">
+							<span>Sed rhoncus mauris quis enim fermentum, at suscipit velit porttitor. Nulla suscipit vel nunc nec aliquet. In fringilla neque nec lacinia pretium. Nam sit amet orci egestas, tincidunt ligula id, consequat erat. Vestibulum sollicitudin justo tortor, ut pellentesque urna mollis ut. Proin scelerisque risus et ante blandit dignissim. Ut ac felis a lorem mollis eleifend. Suspendisse potenti. Curabitur egestas urna ut vehicula efficitur. Integer et maximus nunc, vitae congue ex. Maecenas feugiat condimentum congue. Quisque euismod scelerisque facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mi ex, commodo eget fermentum ac, rutrum eu ligula.</span>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</body>
+</html>
