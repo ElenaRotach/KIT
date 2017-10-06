@@ -5,6 +5,7 @@
 		
 	    <link href="./css/bootstrap.min.css" rel="stylesheet" />
 	    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+	    <link rel="stylesheet" href="./css/font/css/font-awesome.min.css">
 	    <script src="./js/jquery.min.js"></script>
 	    <script src="./js/bootstrap.min.js"></script>
 	    <script src="./js/jquery.maskedinput.min.js"></script>
@@ -35,7 +36,7 @@
 					<option>Юридическое лицо</option>
 					<option>Индивидуальный предприниматель</option>
 				</select>
-
+<!-- placeholder="Укажите наименование"-->
 				<label>Наименование <span>*</span></label>
 				<Input type = "text" id="name"/>
 
@@ -48,10 +49,10 @@
 				<label>Телефон</label>
 				<Input type = "text" id="tel"/>
 
-				<label>e-mail</label>
-				<Input type = "text" id="mail"/>
+				<label>e-mail</label><i id="mailValid" class="fa"></i>
+				<Input type = "email" id="mail" class="validate"/>
 
-				<button>Сохранить</button>
+				<button onclick="alert('123')">Сохранить</button>
 
 			<script type="text/javascript">
 				$(function(){
@@ -69,6 +70,35 @@
 						$("#kpp").mask("0");
 					}
 				}
+
+				$(function() {
+			        $(".validate").on('input',function() {
+
+			            var email = $.trim(this.value), $span = $("#mailValid");
+
+			            if (email) {
+			                if (isValidEmailAddress(email)) {
+			                		$span.removeClass("fa-remove");
+			                    	$span.addClass("fa-check");
+			                    };
+			                } else {
+			                	$span.removeClass("fa-check");
+			                    $span.addClass("fa-remove");
+			                    };
+			                }
+			            } else {
+			                $span.removeClass("fa-remove");
+			                $span.removeClass("fa-check");
+			            }
+
+			        });
+
+			    });
+
+			    function isValidEmailAddress(emailAddress) {
+			        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+			        return pattern.test(emailAddress);
+			    }
 			</script>
 		</form>		
 	</body>
