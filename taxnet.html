@@ -9,6 +9,11 @@
 	    <script src="./js/jquery.min.js"></script>
 	    <script src="./js/bootstrap.min.js"></script>
 	    <script src="./js/jquery.maskedinput.min.js"></script>
+<!--react-->
+	    <script src="./js/react/babel.js"></script>
+	    <script src="./js/react/react.js"></script>
+	    <script src="./js/react/react-dom.js"></script>
+<!--react-->	    
 	    <style>
 			input, button, select{
 				padding:2px;
@@ -29,14 +34,14 @@
 	    </style>
 	</head>
 	<body>
-		<form class="col-xs-6">
+		<!--<form class="col-xs-6">
 
 				<label>Тип</label>
 				<select  id="type" onchange="test(event)">
 					<option>Юридическое лицо</option>
 					<option>Индивидуальный предприниматель</option>
 				</select>
-<!-- placeholder="Укажите наименование"-->
+
 				<label>Наименование <span>*</span></label>
 				<Input type = "text" id="name"/>
 
@@ -100,6 +105,48 @@
 			        return pattern.test(emailAddress);
 			    }
 			</script>
-		</form>		
+		</form>		-->
+		<div id="test"></div>
+		<script type="text/babel" src="">
+			var NewOrganization = React.createClass({
+	render:function () {
+		return(
+<div>
+			<form className="col-xs-6">
+
+				<label>Тип</label>
+				<select  id="type" onchange="test(event)">
+					<option>Юридическое лицо</option>
+					<option>Индивидуальный предприниматель</option>
+				</select>
+				<label>Наименование <span>*</span></label>
+				<Input type = "text" id="name"/>
+
+				<label>ИНН <span>*</span></label>
+				<Input type = "text" id="inn"/>			
+
+				<label>КПП <span>*</span></label>
+				<Input type = "text" id="kpp"/>
+
+				<label>Телефон</label>
+				<Input type = "text" id="tel"/>
+
+				<label>e-mail</label><i id="mailValid" className="fa"></i>
+				<Input type = "email" id="mail" className="validate"/>
+
+				<button onclick="alert('123')">Сохранить</button>
+
+
+		</form></div>
+		);
+	}
+});
+
+ReactDOM.render(
+    <NewOrganization/>,
+    document.getElementById('test')
+
+);
+		</script>
 	</body>
 </html>
