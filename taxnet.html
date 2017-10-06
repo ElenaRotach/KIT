@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>taxnet</title>
+		
+	    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+	    <link rel="stylesheet" href="./css/bootstrap-theme.css">
+	    <script src="./js/jquery.min.js"></script>
+	    <script src="./js/bootstrap.min.js"></script>
+	    <script src="./js/jquery.maskedinput.min.js"></script>
+	    <style>
+			input, button, select{
+				padding:2px;
+				margin: 2px;
+			}
+
+			form label, form select, form input{
+				width:100%;
+			}
+
+			button{
+				float: right;
+				margin-top: 10px;
+			}
+			span{
+				color: red;
+			}
+	    </style>
+	</head>
+	<body>
+		<form class="col-xs-6">
+
+				<label>Тип</label>
+				<select  id="type" onchange="test(event)">
+					<option>Юридическое лицо</option>
+					<option>Индивидуальный предприниматель</option>
+				</select>
+
+				<label>Наименование <span>*</span></label>
+				<Input type = "text" id="name"/>
+
+				<label>ИНН <span>*</span></label>
+				<Input type = "text" id="inn"/>			
+
+				<label>КПП <span>*</span></label>
+				<Input type = "text" id="kpp"/>
+
+				<label>Телефон</label>
+				<Input type = "text" id="tel"/>
+
+				<label>e-mail</label>
+				<Input type = "text" id="mail"/>
+
+				<button>Сохранить</button>
+
+			<script type="text/javascript">
+				$(function(){
+					$("#tel").mask("+7 (999) 999-9999");
+					$("#inn").mask("9999999999");
+					$("#kpp").mask("999999999");
+				});
+				function test(evt){
+					if(evt.currentTarget.value=="Юридическое лицо"){
+						$("#inn").mask("9999999999");
+						$("#kpp").mask("999999999");
+					}else{
+						$("#inn").mask("999999999999");
+						$("#kpp").val("0");
+						$("#kpp").mask("0");
+					}
+				}
+			</script>
+		</form>		
+	</body>
+</html>
